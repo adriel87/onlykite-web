@@ -14,11 +14,6 @@ import {
 } from '@chakra-ui/react';
 import { FaCheckCircle, FaFacebook, FaInstagram, FaMailBulk } from 'react-icons/fa';
 
-const options = [
-  { id: 1, desc: '1 lorem ipsum' },
-  { id: 2, desc: 'Lorem, ipsum dolor.' },
-  { id: 3, desc: 'Monthly Updates' },
-];
 const starterOptions = [
   { id: 1, desc: 'pregunta lo que quieras' },
   { id: 2, desc: 'Vente a navegar un dia' },
