@@ -20,6 +20,16 @@ const options = [
   { id: 2, desc: 'Lorem, ipsum dolor.' },
   { id: 3, desc: 'Monthly Updates' },
 ];
+const starterOptions = [
+  { id: 1, desc: 'pregunta lo que quieras' },
+  { id: 2, desc: 'Vente a navegar un dia' },
+];
+const MemberOptions = [
+  { id: 1, desc: 'Participa en nuestros eventos' },
+  { id: 2, desc: 'No navegaras solo' },
+  { id: 3, desc: 'descuentos en marcas deportivas' },
+  { id: 4, desc: 'y muchas cosas más'}
+];
 
 const PackageTier = ({
   title,
@@ -38,8 +48,8 @@ const PackageTier = ({
       p={3}
       py={3}
       justifyContent={{
-        base: 'flex-start',
-        md: 'space-around',
+        base: 'space-around',
+        md: 'space-between',
       }}
       direction={{
         base: 'column',
@@ -49,15 +59,18 @@ const PackageTier = ({
       <Heading size={'md'}>{title}</Heading>
       <List spacing={3} textAlign="start">
         {options.map((desc, id) => (
-          <ListItem key={desc.id}>
-            <ListIcon as={FaCheckCircle} color="green.500" />
+          <ListItem width={350} key={desc.id}>
+            <ListIcon  as={FaCheckCircle} color="green.500" />
             {desc.desc}
           </ListItem>
         ))}
       </List>
-      <Heading size={'xl'}>{typePlan}</Heading>
+      <Heading size={'xl'} >{typePlan}</Heading>
       <Stack>
         <Button
+          onClick={()=>{
+            window.open('mailto:onlykite@example.com?subject=Me uno al club&body=Saludos me gustaria pertenecer al club');
+          }}
           size="md"
           color={useColorModeValue(colorTextLight, colorTextDark)}
           bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
@@ -95,7 +108,7 @@ const index = () => {
             }}
             textAlign={'center'}>
             <Heading size={'lg'}>
-              The Right Plan for <Text color="purple.400">Your Business</Text>
+              Vente a navegar <Text color="blue.500">disfruta</Text>
             </Heading>
           </Stack>
           <Stack
@@ -104,23 +117,20 @@ const index = () => {
               md: '60%',
             }}>
             <Text textAlign={'center'}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              quod in iure vero. Facilis magnam, sed officiis commodi labore
-              odit.
+              Aprovéchate de todas las ventajas que tendrás al forma parte de nuestro club
             </Text>
           </Stack>
         </Stack>
         <Divider />
-        <PackageTier title={'Starter'} typePlan="Free" options={options} />
+        <PackageTier title={'Starter'} typePlan="Gratis" options={starterOptions} />
         <Divider />
         <PackageTier
-          title={'Lorem Plus'}
+          title={'Member'}
           checked={true}
-          typePlan="$32.00"
-          options={options}
+          typePlan="$50.00"
+          options={MemberOptions}
         />
         <Divider />
-        <PackageTier title={'Lorem Pro'} typePlan="$50.00" options={options} />
       </Stack>
     </Box>
       <Footer/>

@@ -69,6 +69,7 @@ function TwoColumnInfo({tag, mainText, iconList, imgUrl}) {
                   
                   
                   <InfoClub
+                  key={activitie}
                   icon={
                     <Icon as={iconList[index]} color={iconColor.image[index]} w={5} h={5} />
                   }

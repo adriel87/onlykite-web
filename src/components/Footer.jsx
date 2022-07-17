@@ -69,10 +69,10 @@ import {
           justify={'center'}
           align={'center'}>
           <Logo />
-          <Stack direction={'row'} spacing={6}>
-            <Link href={'/'}>Inicio</Link>
-            <Link href={'/photos'}>fotos del club</Link>
-            <Link href={'/prices'}>apuntate al club</Link>
+          <Stack direction={'row'} spacing={6} textAlign={'center'}>
+            <Link href={'/'} >Inicio</Link>
+            <Link href={'/photos'} >fotos del club</Link>
+            <Link href={'/prices'} >apuntate al club</Link>
           </Stack>
         </Container>
   
@@ -88,7 +88,7 @@ import {
             spacing={4}
             justify={{ base: 'center', md: 'space-between' }}
             align={{ base: 'center', md: 'center' }}>
-            <Text>© 2022 Adrieloronoz.dev made whit 💜</Text>
+            <a href="https://www.adrieloronoz.dev" target={'_blank'}>© 2022 Adrieloronoz.dev made whit 💜</a>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'Twitter'} href={'#'}>
                 <FaTwitter />

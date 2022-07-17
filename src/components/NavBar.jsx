@@ -10,9 +10,10 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['🌊 Inicio 🌊', '📸 fotos del club', 'Apúntate al club 🤙'];
+const Links = ['🌊 Inicio 🌊', '🤔 Sobre nosotros', '📸 fotos del club', 'Apúntate al club 🤙'];
 const listLinks = [
   '',
+  'about',
   'photos',
   'prices'
 ]
@@ -34,9 +35,10 @@ const NavLink = ( {name, url} ) => (
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+//TODO position fixed or absolute para dejar la barra fijada arriba
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} > 
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -51,8 +53,8 @@ export default function NavBar() {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map((link,index) => (
+                <NavLink key={link} name={Links[index]} url={listLinks[index]} >{link}</NavLink>
               ))}
             </HStack>
           </HStack>

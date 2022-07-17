@@ -1,2 +1,9 @@
 # node modules
 /node_modules
+
+
+.next
+
+# carpetas que dejar fuera en local
+
+/assets_sintratar
