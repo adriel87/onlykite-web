@@ -11,6 +11,7 @@ import {
     useColorModeValue,
     Button,
   } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import InfoClub from './InfoClub';
 
 // const iconList= [MdKitesurfing, MdOutlineFastfood, BiHappyHeartEyes]
@@ -35,6 +36,8 @@ const iconColor={
 
 
 function TwoColumnInfo({tag, mainText, iconList, imgUrl}) {
+
+  const router = useRouter()
     return (
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
@@ -107,7 +110,7 @@ function TwoColumnInfo({tag, mainText, iconList, imgUrl}) {
               objectFit={'cover'}
             />
           </Flex>
-            <Button colorScheme='teal' variant='outline'>
+            <Button colorScheme='teal' variant='outline' onClick={()=> router.push('/prices')}>
                 {mainText.caption}
             </Button>
         </SimpleGrid>

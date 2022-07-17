@@ -17,8 +17,12 @@ import NavBar from '../src/components/NavBar';
 import { informationTexts } from '../src/db/informationText';
 import { iconsList } from '../src/db/icons';
 import { imageList } from '../src/db/imagesList';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+
+  const router  = useRouter()
+
   return (
     <>
     <NavBar />
@@ -62,7 +66,7 @@ export default function Home() {
             alignSelf={'center'}
             position={'relative'}>
             <Button
-              onClick={}
+              onClick={()=> router.push('/prices')}
               colorScheme={'green'}
               bg={'green.400'}
               rounded={'full'}

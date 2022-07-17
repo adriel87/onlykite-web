@@ -8,7 +8,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaInstagram, FaFacebook, FaMailBulk } from 'react-icons/fa';
   
   const Logo = (props) => {
     return (
@@ -70,9 +70,10 @@ import {
           align={'center'}>
           <Logo />
           <Stack direction={'row'} spacing={6} textAlign={'center'}>
-            <Link href={'/'} >Inicio</Link>
-            <Link href={'/photos'} >fotos del club</Link>
-            <Link href={'/prices'} >apuntate al club</Link>
+            <Link href='/' >Inicio</Link>
+            <Link href='about'>Sobre nosotros</Link>
+            <Link href='/photos' >fotos del club</Link>
+            <Link href='/prices' >apuntate al club</Link>
           </Stack>
         </Container>
   
@@ -90,14 +91,14 @@ import {
             align={{ base: 'center', md: 'center' }}>
             <a href="https://www.adrieloronoz.dev" target={'_blank'}>© 2022 Adrieloronoz.dev made whit 💜</a>
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
-              </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+              <SocialButton label={'Facebook'}  href={'https://www.google.es'} target={'blank'}>
+                <FaFacebook />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
                 <FaInstagram />
+              </SocialButton>
+              <SocialButton label={'mail'} href={'#'}>
+                <FaMailBulk />
               </SocialButton>
             </Stack>
           </Container>

@@ -20,6 +20,7 @@ const listLinks = [
 
 const NavLink = ( {name, url} ) => (
   <Link
+    fontSize={'xl'}
     px={2}
     py={1}
     rounded={'md'}
@@ -38,7 +39,7 @@ export default function NavBar() {
 //TODO position fixed or absolute para dejar la barra fijada arriba
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} > 
+      <Box bg={'#80D0BA'} px={4} > 
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -65,7 +66,7 @@ export default function NavBar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((_,index) => (
-                <NavLink key={_} name={Links[index]} url={listLinks[index]}/>
+                <NavLink  key={_} name={Links[index]} url={listLinks[index]}/>
               ))}
             </Stack>
           </Box>

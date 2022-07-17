@@ -11,9 +11,8 @@ import {
   ListItem,
   Stack,
   Text,
-  useColorModeValue,
 } from '@chakra-ui/react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaFacebook, FaInstagram, FaMailBulk } from 'react-icons/fa';
 
 const options = [
   { id: 1, desc: '1 lorem ipsum' },
@@ -67,14 +66,14 @@ const PackageTier = ({
       </List>
       <Heading size={'xl'} >{typePlan}</Heading>
       <Stack>
-        <Button
-          onClick={()=>{
-            window.open('mailto:onlykite@example.com?subject=Me uno al club&body=Saludos me gustaria pertenecer al club');
-          }}
-          size="md"
-          color={useColorModeValue(colorTextLight, colorTextDark)}
-          bgColor={useColorModeValue(bgColorLight, bgColorDark)}>
-          Get Started
+        <Button onClick={()=> window.open('https://instagram.com/onlykitegrancanaria','blank')}>
+          <FaFacebook />
+        </Button>
+        <Button onClick={()=> window.open('https://instagram.com/onlykitegrancanaria','blank')}>
+          <FaInstagram />
+        </Button>
+        <Button onClick={()=>{window.open('mailto:onlykite@example.com?subject=Me uno al club&body=Saludos me gustaría pertenecer al club')}}>
+          <FaMailBulk />
         </Button>
       </Stack>
     </Stack>
